@@ -1,0 +1,35 @@
+.card{
+  display: flex;
+  flex-direction: column;
+  margin: 1.5rem;
+}
+.card img{
+  width: 100%;
+  border-top-right-radius: .6rem;
+  border-top-left-radius: .6rem;
+  aspect-ratio: 1.65;
+  object-fit: cover;
+}
+.card .card-article{
+  display: flex;
+  flex-direction: column;
+  margin: 1rem;
+
+}
+.card .card-article .article-title{
+  font-size: 1rem;
+  line-height: 1.5;
+  color: var(--very-dark-grayish-blue);
+}
+.card .card-article .article-pagraph{
+  line-height: 1.2;
+  color: var(--grayish-blue);
+}
+.card .card-article .article-footer{
+  display: flex;
+}
+.card .card-article .article-footer img{
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+}
