@@ -2,34 +2,159 @@
   display: flex;
   flex-direction: column;
   margin: 1.5rem;
+  max-width: 512px;
+  background-color: white;
+  border-radius: .6rem;
+  box-shadow: 0 5px 20px #00000010;
 }
 .card img{
   width: 100%;
   border-top-right-radius: .6rem;
   border-top-left-radius: .6rem;
-  aspect-ratio: 1.65;
+  aspect-ratio: 165/101;
   object-fit: cover;
+  object-position: 0 -16px;
 }
 .card .card-article{
   display: flex;
   flex-direction: column;
-  margin: 1rem;
-
+  margin: 0;
+  padding: 1.9rem;
+  margin-top: 0;
+  padding-top: 1.75rem ;
+  margin-bottom: 0;
+  padding-bottom: 1.3rem;
+  position: relative;
 }
 .card .card-article .article-title{
-  font-size: 1rem;
-  line-height: 1.5;
+  font-size: 1.03rem;
+  line-height: 1.45;
   color: var(--very-dark-grayish-blue);
+  margin: 0;
+  margin-top: .5rem;
 }
 .card .card-article .article-pagraph{
-  line-height: 1.2;
+  width: 98%;
+  line-height: 1.55;
+  letter-spacing: .1px;
   color: var(--grayish-blue);
 }
 .card .card-article .article-footer{
   display: flex;
 }
 .card .card-article .article-footer img{
-  width: 56px;
-  height: 56px;
+  width: 40px;
+  height: 40px;
   border-radius: 50%;
+  object-position: 0;
+}
+.card .article-footer{
+  margin-top: 1.2rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  justify-content: space-between;
+}
+
+.card .article-footer div{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.card .article-footer div .footer-name{
+  margin: 0;
+  font-weight: 700;
+  color: var(--very-dark-grayish-blue);
+  margin-bottom: 2px;
+  letter-spacing: .1px;
+}
+.card .article-footer div .footer-date{
+  margin-top: 2px;
+  margin: 0;
+  color: var(--grayish-blue);
+  letter-spacing: .1px;
+}
+.card .card-article .article-footer .card-shared{
+  margin-left: auto;
+  cursor: pointer;
+  border-radius: 50%;
+  z-index: 10;
+}
+.card .card-article .article-footer .card-shared-activate{
+  background-color: var(--grayish-blue);
+  margin-left: auto;
+  cursor: pointer;
+  border-radius: 50%;
+  z-index: 10;
+}
+.card .card-article .article-footer .footer-icon__sahred{
+  background-color: var(--light-grayish-blue);
+  box-sizing: border-box;
+  width: 32px;
+  height: 32px;
+  padding: .5rem;
+  object-fit: contain;
+  z-index: 10;
+}
+.card .article-footer .card-toltip{
+  box-sizing: border-box;
+  padding: 1rem;
+  padding-left: 1.9rem;
+  color: var(--grayish-blue);
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  position: absolute;
+  background-color: var(--very-dark-grayish-blue);
+  display: flex;
+  flex-direction: row;
+  border-bottom-left-radius: .6rem;
+  border-bottom-right-radius: .6rem;
+  justify-content: flex-start;
+  align-items: center;
+}
+.card .article-footer p{
+  letter-spacing: 5px;
+}
+.card .article-footer .card-shared-activate img{
+  border-radius: 0;
+  padding: .63rem;
+  box-sizing: border-box;
+  object-fit: contain;
+}
+@media (width > 612px) {
+  .card{
+    flex-direction: row;
+    margin: 0;
+    max-width: 730px;
+    margin-left: 2rem;
+    margin-right: 2rem;
+  }
+  .card img {
+    max-width: 285px;
+    border-radius: 0;
+    border-top-left-radius: .6rem;
+    border-bottom-left-radius: .6rem;
+    object-position: 0;
+    aspect-ratio: 1.02;
+  }
+  .card .card-article {
+    padding: 0;
+    margin: 2.5rem;
+    margin-top: 2.08rem;
+    margin-bottom: 1rem;
+  }
+  .card .card-article .article-title {
+    margin: 0;
+    font-size: 1.25rem;
+    letter-spacing: .2px;
+    line-height: 1.4;
+  }
+  .card .card-article .article-pagraph {
+    margin-top: 12px;
+    line-height: 1.55;
+  }
+  .card .article-footer {
+    margin-top: 6px;
+  }
 }
