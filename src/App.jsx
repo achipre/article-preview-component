@@ -4,13 +4,25 @@ import Facebook from './assets/icon-facebook.svg'
 import Pinterest from './assets/icon-pinterest.svg'
 import Twitter from './assets/icon-twitter.svg'
 import './App.css'
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 
 export const App = () => {
   const [activate, setActivate] = useState(false)
-  const showSocial = () => {
+  const showSocial = (e) => {
+    e.stopPropagation()
     setActivate(!activate)
   }
+  const showSocialOff = () => {
+    setActivate(false)
+  }
+  useEffect(() => {
+    const body = document.body
+    body.addEventListener('click', showSocialOff)
+    return () => {
+      document.removeEventListener('click', showSocialOff)
+    }
+  }, [])
+
   return (
     <main className="card">
       <img src={Imagen} alt="Imagen de Ejemplo de una planta" />
@@ -30,7 +42,6 @@ export const App = () => {
             <p className="footer-date">28 Jun 2020</p>
           </div>
           <div className={activate ? 'card-shared-activate' : 'card-shared'}>
-            <input type="checkbox" checked={activate} hidden />
             <svg
               style={{ backgroundColor: activate ? '#6d7f97' : '#ecf2f8' }}
               onClick={showSocial}
