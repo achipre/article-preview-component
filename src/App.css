@@ -87,13 +87,14 @@
   border-radius: 50%;
   z-index: 10;
 }
-.card .card-article .article-footer .footer-icon__sahred{
+.card .card-article .article-footer .footer-icon__shared{
   background-color: var(--light-grayish-blue);
   box-sizing: border-box;
   width: 32px;
   height: 32px;
   padding: .5rem;
   object-fit: contain;
+  border-radius: 50%;
   z-index: 10;
 }
 .card .article-footer .card-toltip{
@@ -156,5 +157,41 @@
   }
   .card .article-footer {
     margin-top: 6px;
+  }
+  .card .article-footer .card-toltip {
+    box-sizing: border-box;
+    width: auto;
+    padding: .4rem;
+    padding-left: 2.2rem;
+    padding-right: 2.2rem;
+    color: var(--grayish-blue);
+    left: auto;
+    right: 0;
+    transform:translateX(calc(50% - 16px)) translateY(-135%);
+    position: absolute;
+    background-color: var(--very-dark-grayish-blue);
+    display: flex;
+    flex-direction: row;
+    border-radius: .6rem;
+    justify-content: center;
+    align-items: center;
+    gap: 1.1rem;
+  }
+  .card .article-footer .card-shared-activate p {
+    padding-left: 0;
+    text-align: end;
+  }
+  .card .article-footer .card-shared-activate img {
+    width: 20px;
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .card .article-footer .card-shared-activate .toaltip-arrow{
+    border: 14px solid var(--very-dark-grayish-blue);
+    border-left: 14px solid transparent;
+    border-right: 14px solid transparent;
+    border-bottom: 14px solid transparent;
+    position: absolute;
+    bottom: -26px;
   }
 }
